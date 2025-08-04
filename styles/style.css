@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#cabecalho {
+    text-align: center;
+}
+
+hr { /* Remover depois, talvez */
+    margin: 10px 0;
+}
+
+#logo {
+    object-fit: contain;
+    width: 100px;
+}
+
+#conteudo {
+    text-align: center;
+    line-height: 25px;
+}
+
+#conteudo button {
+    font-size: 12pt;
+    padding: 5px;
+    margin: 10px;
+}
+
+#rodape {
+    text-align: center;
+}
+
+.icone-rodape {
+    object-fit: contain;
+    width:12pt;
+}
+
+ul li {
+    list-style: none;
+    padding: 4px;
+}
