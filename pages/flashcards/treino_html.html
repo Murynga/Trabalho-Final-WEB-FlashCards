@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
-    <title>WebDev Flashcards</title>
+    <title>Treino HTML - WebDev Flashcards</title>
 </head>
 <body>
     <div id="cabecalho">
@@ -14,12 +14,16 @@
     </div>
     <hr> <!-- Remover depois, talvez  -->
     <div id="conteudo">
-        <h2>Bem vindo(a)!</h2>
-        <p>Escolha a opção "registrar" caso ainda não seja registrado, ou entre com seu usuário:</p>
-        <a href="/pages/login/registro.html"><button>Registrar-se</button></a>
-        <a href="/pages/login/entrar.html"><button>Entrar</button></a>
-        <p style="margin-top: 100px;">Veja também as pessoas que usaram nosso site!</p>
-        <a href="/pages/usuarios.html"><button>Todos os usuários</button></a>
+        <h2>Treino HTML</h2>
+        <p>Clique na seta para a direita se sabe a resposta, na seta para esquerda se não sabe e clique na pergunta para revelar a resposta.</p>
+        <br>
+        <div id="treino">
+            <p><strong>Tempo decorrido: <span id="tempo-decorrido"></span></strong></p>
+            <p><strong>Eu sei: <span id="eu-sei"></span></strong></p>
+            <p><strong>Eu não sei: <span id="eu-nao-sei"></span></strong></p>
+            <br>
+            <p><em>O jogo em si vem aqui</em></p>
+        </div>
     </div>
     <div id="rodape">
         <!-- Teoricamente, isso vai descer quando fizermos o conteúdo do site em si -->
@@ -52,6 +56,7 @@
         <br>
         <p>Todos os direitos de uso seguem a <a href="https://github.com/Murynga/Trabalho-Final-WEB-FlashCards/blob/b939cee245f5b883fcbcceeb0dbc12b394fc517c/LICENSE">licença MIT.</a></p>
     </div>
+
 
     <script src="/js/script.js"></script>
 </body>
