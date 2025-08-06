@@ -23,7 +23,7 @@ hr { /* Remover depois, talvez */
     line-height: 25px;
 }
 
-#conteudo button {
+#conteudo button, #conteudo input {
     font-size: 12pt;
     padding: 5px;
     margin: 10px;
