@@ -17,12 +17,25 @@
         <h2>Treino JavaScript</h2>
         <p>Clique na seta para a direita se sabe a resposta, na seta para esquerda se não sabe e clique na pergunta para revelar a resposta.</p>
         <br>
-        <div id="treino">
+        <div id="treino-cabecalho">
             <p><strong>Tempo decorrido: <span id="tempo-decorrido"></span></strong></p>
             <p><strong>Eu sei: <span id="eu-sei"></span></strong></p>
             <p><strong>Eu não sei: <span id="eu-nao-sei"></span></strong></p>
             <br>
-            <p><em>O jogo em si vem aqui</em></p>
+            <button onclick="comecar('JAVASCRIPT')" id="comecar">Começar</button> <!-- Trocar o parâmetro da função pelo caminho para o JSON das perguntas -->
+            <div id="treino">
+                <div>
+                    <button class="sei-nao-sei" onclick="euSei()"><span class="seta">⬅️</span></button>
+                </div>
+                <div id="flashcard">
+                    <p><span id="pergunta-resposta">
+                        Demiurgo ou Yaldabaoth, é uma figura maligna de varias crenças, especialmente gnostiscismo. Ele como o criador do mundo físico, o Demiurgo é obcecado por coisas físicas e seu próprio poder, procurando impedir que a humanidade entre no reino espiritual e assim escape de seu domínio.
+                    </span></p>
+                </div>
+                <div>
+                    <button class="sei-nao-sei" onclick="naoSei()"><span class="seta">➡️</span></button>
+                </div>
+            </div>
         </div>
     </div>
     <div id="rodape">
