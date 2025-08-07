@@ -1,41 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Signika:wght@300..700&display=swap');
+
+:root {
+    --cor-fundo: #34699A;
+    --cor-primaria: #FDF5AA;
+    --cor-secundaria: #113F67;
+    --cor-terciaria: #58A0C8;
+
+    --fonte-primaria: 'Signika', sans-serif;
+    --fonte-secundaria: 'Crimson Pro', serif; 
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-primaria);
+    font-family: var(--fonte-secundaria);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #cabecalho {
     text-align: center;
-}
-
-hr { /* Remover depois, talvez */
-    margin: 10px 0;
+    padding: 40px 20px; 
+    font-size: 1.8rem; 
+    font-family: var(--fonte-primaria);
 }
 
 #logo {
     object-fit: contain;
-    width: 100px;
+    width: 150px; 
+    max-width: 100%;
+}
+
+#conteudo h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    font-family: var(--fonte-primaria);
 }
 
 #conteudo {
     text-align: center;
+    font-size: 1.3rem;
     line-height: 25px;
+    flex: 1;
+    padding: 20px;
 }
 
-#conteudo button, #conteudo input {
-    font-size: 12pt;
-    padding: 5px;
-    margin: 10px;
+#conteudo button,
+#conteudo input {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.3rem;
+    padding: 15px 25px;
+    margin: 20px;
+    background-color: var(--cor-secundaria);
+    border: none;
+    border-radius: 8px;
+    color: var(--cor-primaria);
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+#conteudo button:hover,
+#conteudo input:hover {
+    background-color: var(--cor-terciaria);
 }
 
 #rodape {
+    font-family: var(--fonte-primaria);
     text-align: center;
+    background-color: var(--cor-secundaria);
+    padding: 10px;
 }
 
 .icone-rodape {
     object-fit: contain;
-    width:12pt;
+    width: 12pt;
 }
 
 ul li {
@@ -43,42 +88,27 @@ ul li {
     padding: 4px;
 }
 
-#treino {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+hr {
+    display: none;
 }
 
-#comecar {
-    cursor: pointer;
-}
+@media (max-width: 768px) {
+    #conteudo {
+        padding: 10px;
+        font-size: 1rem;
+    }
 
-.sei-nao-sei {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 50px;
-    cursor: pointer;
-}
+    #conteudo button,
+    #conteudo input {
+        font-size: 1rem;
+        padding: 10px 18px;
+        margin: 15px;
+    }
 
-.seta {
-    font-size: 60px;
-}
-
-#flashcard {
-    width: 600px;
-    height: 200px;
-    border-style: solid;
-    border-radius: 10px;
-    border-color: rgb(85, 85, 85);
-    cursor: pointer;
-}
-
-#pergunta-resposta {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    width:600px;
-    height:200px;
+    #logo {
+        width: 100px;
+    }
+    #conteudo h2 {
+        font-size: 2rem;
+    }
 }
