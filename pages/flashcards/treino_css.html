@@ -25,7 +25,7 @@
             <button onclick="comecar('CSS')" id="comecar">Começar</button> <!-- Trocar o parâmetro da função pelo caminho para o JSON das perguntas -->
             <div id="treino">
                 <div>
-                    <button class="sei-nao-sei" onclick="euSei()"><span class="seta">⬅️</span></button>
+                    <button id="nao-sei" onclick="botaoEsquerdo()"><span id="seta-esquerda">⬅️</span></button>
                 </div>
                 <div id="flashcard">
                     <p><span id="pergunta-resposta">
@@ -33,7 +33,7 @@
                     </span></p>
                 </div>
                 <div>
-                    <button class="sei-nao-sei" onclick="naoSei()"><span class="seta">➡️</span></button>
+                    <button id="sei" onclick="botaoDireito()"><span id="seta-direita">➡️</span></button>
                 </div>
             </div>
         </div>

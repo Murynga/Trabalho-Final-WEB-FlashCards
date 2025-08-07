@@ -1,3 +1,15 @@
+const perguntaResposta = document.getElementById("pergunta-resposta");
+const atualizaEsquerdo = document.getElementById("eu-nao-sei");
+const atualizaDireito = document.getElementById("eu-sei");
+let contagemEsquerdo = 0;
+let contagemDireito = 0;
+let setaEsquerda = document.getElementById("nao-sei");
+setaEsquerda.disabled = true;
+let setaDireita = document.getElementById("sei");
+setaDireita.disabled = true;
+let tempoDecorrido = document.getElementById("tempo-decorrido");
+let tempoComecado = document.getElementById("comecar");
+
 const perguntasHTML = 
 [
     {
@@ -310,9 +322,28 @@ const perguntasSelecionadasHTML = perguntasHTML.slice(0,20);
 const perguntasSelecionadasCSS = perguntasCSS.slice(0,20) ;
 const perguntasSelecionadasJS = perguntasJS.slice(0,20);
 
-perguntasEmbaralhadas(perguntasHTML);
-perguntasEmbaralhadas(perguntasCSS);
-perguntasEmbaralhadas(perguntasJS);
+function comecar(tipoTreino)
+{
+    setaEsquerda.disabled = false;
+    setaDireita.disabled = false;
+    iniciarTemporizador();
+    tempoComecado.disabled = true;
+
+    if(tipoTreino == "CSS")
+    {
+        perguntasEmbaralhadas(perguntasCSS);
+    }
+    
+    else if (tipoTreino == "HTML")
+    {
+        perguntasEmbaralhadas(perguntasHTML);
+    }
+
+    else
+    {
+        perguntasEmbaralhadas(perguntasJS);   
+    }
+}
 
 function perguntasEmbaralhadas(perguntas) 
 {
@@ -321,4 +352,26 @@ function perguntasEmbaralhadas(perguntas)
         const j = Math.floor(Math.random() * (i + 1));
         [perguntas[i], perguntas[j]] = [perguntas[j], perguntas[i]];
     }
+}
+
+function botaoEsquerdo()
+{
+    contagemEsquerdo++;
+    atualizaEsquerdo.innerHTML = contagemEsquerdo;
+}
+
+function botaoDireito()
+{
+    contagemDireito++;
+    atualizaDireito.innerHTML = contagemDireito;
+}
+
+function iniciarTemporizador() 
+{
+    tempo = 0;
+    intervaloTempo = setInterval(() =>  
+    {
+        tempo++;
+        tempoDecorrido.innerHTML = `${tempo}s`;
+    }, 1000);
 }
