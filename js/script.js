@@ -9,6 +9,10 @@ let setaDireita = document.getElementById("sei");
 setaDireita.disabled = true;
 let tempoDecorrido = document.getElementById("tempo-decorrido");
 let tempoComecado = document.getElementById("comecar");
+let perguntasSelecionadas = [];
+let indiceAtual = 0;
+let continuar = document.getElementById("continuar");
+continuar.disabled = true;
 
 const perguntasHTML = 
 [
@@ -318,31 +322,31 @@ const perguntasJS = [
     }
 ];
 
-const perguntasSelecionadasHTML = perguntasHTML.slice(0,20); 
-const perguntasSelecionadasCSS = perguntasCSS.slice(0,20) ;
-const perguntasSelecionadasJS = perguntasJS.slice(0,20);
-
 function comecar(tipoTreino)
 {
+    indiceAtual = 0;
     setaEsquerda.disabled = false;
     setaDireita.disabled = false;
     iniciarTemporizador();
     tempoComecado.disabled = true;
-
+    
     if(tipoTreino == "CSS")
     {
-        perguntasEmbaralhadas(perguntasCSS);
+        perguntasSelecionadas = [...perguntasCSS];
     }
     
     else if (tipoTreino == "HTML")
     {
-        perguntasEmbaralhadas(perguntasHTML);
+        perguntasSelecionadas = [...perguntasHTML];
     }
 
     else
     {
-        perguntasEmbaralhadas(perguntasJS);   
+        perguntasSelecionadas = [...perguntasJS];
     }
+
+    perguntasEmbaralhadas(perguntasSelecionadas);
+    mostrarPerguntaAtual();
 }
 
 function perguntasEmbaralhadas(perguntas) 
@@ -357,13 +361,28 @@ function perguntasEmbaralhadas(perguntas)
 function botaoEsquerdo()
 {
     contagemEsquerdo++;
-    atualizaEsquerdo.innerHTML = contagemEsquerdo;
+    atualizaEsquerdo.textContent = contagemEsquerdo;
+    perguntaResposta.textContent = perguntasSelecionadas[indiceAtual].resposta;
+
+    setaEsquerda.disabled = true;
+    setaDireita.disabled = true;
+    continuar.disabled = false;
+    continuar.addEventListener("click", () => 
+    {
+        indiceAtual++;
+        mostrarPerguntaAtual();
+        setaEsquerda.disabled = false;
+        setaDireita.disabled = false;
+        continuar.disabled = true;
+    }, {once: true});
 }
 
 function botaoDireito()
 {
     contagemDireito++;
-    atualizaDireito.innerHTML = contagemDireito;
+    atualizaDireito.textContent = contagemDireito;
+    indiceAtual++;
+    mostrarPerguntaAtual();
 }
 
 function iniciarTemporizador() 
@@ -372,6 +391,22 @@ function iniciarTemporizador()
     intervaloTempo = setInterval(() =>  
     {
         tempo++;
-        tempoDecorrido.innerHTML = `${tempo}s`;
+        tempoDecorrido.textContent = `${tempo}s`;
     }, 1000);
+}
+
+function mostrarPerguntaAtual() 
+{
+    if (indiceAtual < perguntasSelecionadas.length) 
+    {
+        perguntaResposta.textContent = perguntasSelecionadas[indiceAtual].pergunta;
+    } 
+    
+    else 
+    {
+        perguntaResposta.textContent = "Fim do treino! Recarregue a página para tentar de novo, ou volte para escolher outro treino.";
+        setaDireita.disabled = true;
+        setaEsquerda.disabled = true;
+        clearInterval(intervaloTempo);
+    }
 }
