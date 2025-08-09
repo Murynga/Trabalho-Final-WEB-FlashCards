@@ -83,6 +83,15 @@ body {
     width: 12pt;
 }
 
+#licenca, #licenca:visited {
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+#licenca:hover {
+    text-decoration: underline;
+}
+
 ul li {
     list-style: none;
     padding: 4px;

@@ -18,12 +18,12 @@
         <div id="conteudo">
             <h2>Entrar com seu usuário:</h2>
             <br>
-            <form action="/pages/escolher_treino.html">
+            <form action="/js/api_script.js" id="formulario-entrada">
                 <input type="text" placeholder="Nome de usuário" id="nomeUsuario" required>
                 <br>
                 <input type="password" placeholder="Senha" required>
                 <br>
-                <button type="submit">Entrar</button>
+                <button onclick="checaAdmin()" type="submit">Entrar</button>
             </form>
         </div>
         <div id="rodape">
@@ -55,9 +55,9 @@
                 </li>
             </ul>
             <br>
-            <p>Todos os direitos de uso seguem a <a href="https://github.com/Murynga/Trabalho-Final-WEB-FlashCards/blob/b939cee245f5b883fcbcceeb0dbc12b394fc517c/LICENSE">licença MIT.</a></p>
+            <p>Todos os direitos de uso seguem a <a id="licenca" href="https://github.com/Murynga/Trabalho-Final-WEB-FlashCards/blob/b939cee245f5b883fcbcceeb0dbc12b394fc517c/LICENSE">licença MIT.</a></p>
         </div>
 
-        <script src="/js/script.js"></script>
+        <script src="/js/api_script.js"></script>
     </body>
 </html>
