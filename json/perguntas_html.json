@@ -1,0 +1,101 @@
+[
+    {
+        "pergunta": "O que é o HTML?",
+        "resposta": "O HTML é uma Linguagem de Marcação de texto utilizada para estruturar conteúdo de páginas Web"
+    }, 
+
+    {
+        "pergunta": "Para que serve o HTML?",
+        "resposta": "O HTML serve para estruturar conteúdo de páginas Web através de elementos definidos pelo desenvolvedor"
+    },
+
+    {
+        "pergunta": "Para que serve a tag <h1> em HTML?",
+        "resposta": "A tag h1 serve para definir um título na sua página HTML"
+    },
+
+    {
+        "pergunta": "Qual a diferença entre as tags <h1> e <h2> em HTML?",
+        "resposta": "A tag h1 define um título, enquanto a tag h2 define um subtítulo"
+    },
+
+    {
+        "pergunta": "Para que serve o <body> do HTML?",
+        "resposta": "O body se refere ao corpo da sua página, ou seja, ele serve para colocar os elementos HTML que estarão ao decorrer da sua página"
+    },
+
+    {
+        "pergunta": "Para que serve a tag <p>?",
+        "resposta": "A tag p se refere a um parágrafo em HTML, usada geralmente para textos"
+    },
+
+    {
+        "pergunta": "Para que serve o <head> do HTML?",
+        "resposta": "O head serve para colocar informações no cabeçalho da sua página, ou seja, não são visíveis no corpo do texto, porém configura como a página deve funcionar, bem como por exemplo, de onde virá o CSS da sua página"
+    },
+
+    {
+        "pergunta": "Para que serve a tag <img>?",
+        "resposta": "Serve para colocar imagens na sua página HTML"
+    },
+
+    {
+        "pergunta": "Para que serve a tag <a> em html?", 
+        "resposta": "a tag <a> serve para linkar uma página interna ou externa ao seu HTML, dessa forma esse link pode ser acessado através da sua página"
+    },
+
+    {
+        "pergunta": "Para que serve a tag <link> em HTML?",
+        "resposta": "servem para conectar coisas específicas ao seu HTML, como o CSS e ícones"
+    },
+
+    {
+        "pergunta": "Qual a diferença da tag <a> para a tag <link>?",
+        "resposta": "a tag <a> serve como link para uma página interna ou externa através da sua página HTML, enquanto o <link> serve para conectar o CSS ou um ícone a sua página. Além disso, o <link> é colocado no head, e a tag <a> é colocada no body"
+    },
+
+    {
+        "pergunta": "Para que serve a tag <script> no HTML?",
+        "resposta": "a tag <script> serve para vincular um código JS para a sua página HTML"
+    },
+
+    {
+        "pergunta": "Para que serve a tag <form>?",
+        "resposta": "Serve para criar um formulário na sua página HTML"
+    },
+
+    {
+        "pergunta": "De quê é composta a estrutura básica que todo documento HTML deve ter?",
+        "resposta": "Ela é composta por <!DOCTYPE html>, <html>, <head> e <body>"
+    },
+
+    {
+        "pergunta": "O que deve ser adicionado no início de um documento HTML para indicar o tipo de documento?",
+        "resposta": "A declaração <!DOCTYPE html>"
+    },
+
+    {
+        "pergunta": "Para que serve <HTML lang = 'pt-br'>?",
+        "resposta": "Serve para definir a linguagem da sua página. Neste exemplo, definida como Português(Brasil)"
+    },
+
+    {
+        "pergunta": "Qual a função da tag <title> no HTML?",
+        "resposta": "serve para definir o título da aba da página no navegador"
+    },
+
+    {
+        "pergunta": "Para que servem div's em HTML?",
+        "resposta" : "Serve para melhor organização do site, sendo mais fácil criar classes e id's para edição no CSS e uso no JS"
+    },
+
+    {
+        "pergunta": "Para que serve o atributo class?",
+        "resposta" : "Serve para dar nome a elementos para depois aplicar estilos e comportamentos através do JS e CSS"
+    },
+
+    {
+        "pergunta": "Como fazer comentários em HTML?",
+        "resposta" : "Os comentários são feitos usando a estrutura <!--  -->"
+    }
+]

@@ -97,7 +97,7 @@ ul li {
     padding: 4px;
 }
 
-#lista-usuarios{
+#lista-usuarios {
     display: flex;
     flex-direction: column;
     align-items: center;

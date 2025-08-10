@@ -1,0 +1,101 @@
+[
+    {
+        "pergunta": "O que é o CSS?",
+        "resposta": "O CSS é uma linguagem de estilos usada para definir a aparência visual de páginas HTML"
+    },
+
+    {
+        "pergunta": "Para que serve o CSS?",
+        "resposta": "O CSS serve para estilizar elementos HTML, como cores, tamanhos, fontes, margens e posicionamento"
+    },
+
+    {
+        "pergunta": "O que significa a sigla CSS?",
+        "resposta": "CSS significa Cascading Style Sheets, ou Folhas de Estilo em Cascata"
+    },
+
+    {
+        "pergunta": "Qual a diferença entre HTML e CSS?",
+        "resposta": "HTML estrutura o conteúdo da página, enquanto o CSS cuida da aparência e estilo visual"
+    },
+
+    {
+        "pergunta": "O que é uma regra CSS?",
+        "resposta": "É uma estrutura que define o seletor e os estilos aplicados, como por exemplo: h1 { color: red; }"
+    },
+
+    {
+        "pergunta": "Como aplicar CSS em um arquivo HTML?",
+        "resposta": "Você pode aplicar CSS de forma inline, interna (dentro da tag <style>) ou externa (através da tag <link>)"
+    },
+
+    {
+        "pergunta": "O que é um seletor em CSS?",
+        "resposta": "É o elemento HTML que será estilizado, como body, h1, .classe ou #id"
+    },
+
+    {
+        "pergunta": "Qual a diferença entre os seletores .classe e #id no CSS?",
+        "resposta": ".classe estiliza todos os elementos com aquela classe, enquanto #id estiliza apenas um elemento com aquele ID"
+    },
+
+    {
+        "pergunta": "Para que serve a propriedade 'color' no CSS?",
+        "resposta": "Serve para definir a cor do texto de um elemento"
+    },
+
+    {
+        "pergunta": "Para que serve a propriedade 'background-color'?",
+        "resposta": "Serve para definir a cor de fundo de um elemento"
+    },
+
+    {
+        "pergunta": "Para que serve a propriedade 'font-size'?",
+        "resposta": "Serve para definir o tamanho da fonte de um texto"
+    },
+
+    {
+        "pergunta": "Para que serve a propriedade 'margin'?",
+        "resposta": "Serve para definir o espaço externo entre um elemento e os outros ao redor"
+    },
+
+    {
+        "pergunta": "Para que serve a propriedade 'padding'?",
+        "resposta": "Serve para definir o espaço interno entre o conteúdo e a borda de um elemento"
+    },
+
+    {
+        "pergunta": "O que é o box model no CSS?",
+        "resposta": "É o modelo de caixa usado para representar a estrutura de um elemento: content, padding, border e margin"
+    },
+
+    {
+        "pergunta": "O que são pseudo-classes no CSS?",
+        "resposta": "São palavras-chave que definem o estado de um elemento, como :hover, :active, :first-child"
+    },
+
+    {
+        "pergunta": "Para que serve o pseudo-classe ':hover'?",
+        "resposta": "Serve para aplicar um estilo quando o usuário passa o mouse sobre o elemento"
+    },
+
+    {
+        "pergunta": "Como aplicar uma fonte personalizada no CSS?",
+        "resposta": "Você pode usar a regra @font-face ou importar com @import de fontes externas como o Google Fonts"
+    },
+
+    {
+        "pergunta": "Para que serve a propriedade 'display' no CSS?",
+        "resposta": "Serve para definir o comportamento de exibição de um elemento, como block, inline ou flex"
+    },
+
+    {
+        "pergunta": "Para que serve a propriedade 'position'?",
+        "resposta": "Define o tipo de posicionamento de um elemento na página, como static, relative, absolute ou fixed"
+    },
+
+    {
+        "pergunta": "Como fazer comentários em CSS?",
+        "resposta": "Os comentários em CSS são feitos com a sintaxe /* comentário */"
+    }
+]

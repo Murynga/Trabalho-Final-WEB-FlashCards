@@ -4,6 +4,7 @@ const url = "https://jsonplaceholder.typicode.com/users/";
 
 preencheLista();
 
+// função para checar se o usuário e senha inseridos são de administrador
 function checaAdmin() {
     let formulario = document.getElementById("formulario-entrada");
     formulario.addEventListener("submit", (entrar) => {
@@ -18,6 +19,7 @@ function checaAdmin() {
     });
 }
 
+// função assíncrona para preencher a lista de usuários
 async function preencheLista() {
     const usuarios = await getUsuarios();
     
@@ -35,6 +37,7 @@ async function preencheLista() {
     }
 }
 
+// função assíncrona para acessar a API do JSONPlaceholder e pegar os usuários (método GET)
 async function getUsuarios() {
     const response = await fetch(url);
 
@@ -47,6 +50,7 @@ async function getUsuarios() {
     }
 }
 
+// função assíncrona para alterar o nome de um usuário escolhido (método PATCH)
 async function alteraNome() {
     if (usuarioSelecionado != null) {
         let novoNome = window.prompt("Insira o novo nome:", usuarioSelecionado[0]);
@@ -77,6 +81,7 @@ async function alteraNome() {
     }
 }
 
+// função assíncrona para remover um usuário escolhido (método DELETE)
 async function removeUsuario() {
     if (usuarioSelecionado != null) {
         let remover = window.confirm(`Tem certeza de que quer remover ${usuarioSelecionado[0]}?`);
@@ -91,7 +96,7 @@ async function removeUsuario() {
                 await preencheLista();
             } else {
             alert("Erro ao remover usuário: " + response.status);
-        }
+            }
         }
     }
 }
