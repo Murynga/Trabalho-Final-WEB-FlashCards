@@ -41,7 +41,8 @@ A página inicial tem opções para realização de cadastro ou login, e uma op�
   - Clicar em `Alterar nome`, em que será requisitado ao administrador inserir o novo nome do usuário selecionado, e pode confirmar a alteração clicando em `OK`;
 
   - Clicar em `Remover usuário`, em que será perguntado ao administrador se ele tem certeza de que quer remover o usuário escolhido, onde ele pode optar por confirmar ou cancelar a remoção.
-  
+
+  ---
 </details>
 
 
