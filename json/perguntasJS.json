@@ -1,0 +1,101 @@
+[
+    {
+        "pergunta": "O que é o JavaScript?",
+        "resposta": "O JavaScript é uma linguagem de programação usada para criar interatividade em páginas web"
+    },
+
+    {
+        "pergunta": "Para que serve o JavaScript?",
+        "resposta": "Serve para adicionar comportamentos dinâmicos, como validação de formulários, animações e resposta a eventos"
+    },
+
+    {
+        "pergunta": "JavaScript tem alguma relação com Java?",
+        "resposta": "Não. Apesar dos nomes parecidos, JavaScript e Java são linguagens diferentes, com finalidades distintas"
+    },
+
+    {
+        "pergunta": "Como inserir JavaScript em um HTML?",
+        "resposta": "Você pode usar a tag <script> no head ou no final do body do HTML"
+    },
+
+    {
+        "pergunta": "O que é uma variável em JavaScript?",
+        "resposta": "É um espaço na memória para armazenar dados que podem mudar durante a execução"
+    },
+
+    {
+        "pergunta": "Quais são as palavras-chave para declarar variáveis em JS?",
+        "resposta": "As principais são: var, let e const"
+    },
+
+    {
+        "pergunta": "Qual a diferença entre let e const?",
+        "resposta": "let permite mudar o valor da variável; const define uma constante que não pode ser alterada"
+    },
+
+    {
+        "pergunta": "O que é uma função em JavaScript?",
+        "resposta": "Função é um bloco de código que pode ser executado sempre que for chamado"
+    },
+
+    {
+        "pergunta": "Como se declara uma função em JavaScript?",
+        "resposta": "Usando a palavra-chave function, seguida do nome da função e parênteses: function nome() { }"
+    },
+
+    {
+        "pergunta": "O que são eventos em JavaScript?",
+        "resposta": "Eventos são ações que ocorrem na página, como cliques, teclas pressionadas ou o carregamento da página"
+    },
+
+    {
+        "pergunta": "Como capturar um clique de botão em JavaScript?",
+        "resposta": "Usando addEventListener: botão.addEventListener('click', função)"
+    },
+
+    {
+        "pergunta": "O que é o DOM em JavaScript?",
+        "resposta": "É a estrutura em árvore da página HTML, que o JS pode acessar e modificar dinamicamente"
+    },
+
+    {
+        "pergunta": "Como acessar um elemento HTML no JS?",
+        "resposta": "Pode-se usar métodos como getElementById, querySelector ou getElementsByClassName"
+    },
+
+    {
+        "pergunta": "Para que serve o console.log()?",
+        "resposta": "Serve para exibir mensagens no console do navegador, útil para testes e depuração"
+    },
+
+    {
+        "pergunta": "O que é um array em JavaScript?",
+        "resposta": "É uma estrutura que armazena vários valores em uma única variável"
+    },
+
+    {
+        "pergunta": "O que é um objeto em JavaScript?",
+        "resposta": "É uma coleção de propriedades, com chave e valor, usada para representar entidades complexas"
+    },
+
+    {
+        "pergunta": "O que são operadores em JS?",
+        "resposta": "São símbolos que realizam operações em valores, como +, -, *, /, ===, &&, ||"
+    },
+
+    {
+        "pergunta": "Para que serve o if em JavaScript?",
+        "resposta": "Serve para executar um bloco de código apenas se uma condição for verdadeira"
+    },
+
+    {
+        "pergunta": "Como fazer um loop em JavaScript?",
+        "resposta": "Pode-se usar estruturas como for, while ou forEach para repetir blocos de código"
+    },
+
+    {
+        "pergunta": "Como fazer comentários em JavaScript?",
+        "resposta": "Comentários de uma linha usam // e comentários de múltiplas linhas usam /* */"
+    }
+]

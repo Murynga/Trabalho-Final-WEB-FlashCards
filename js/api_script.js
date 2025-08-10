@@ -91,7 +91,7 @@ async function removeUsuario() {
                 await preencheLista();
             } else {
             alert("Erro ao remover usuário: " + response.status);
-        }
+            }
         }
     }
 }
