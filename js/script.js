@@ -14,6 +14,7 @@ let indiceAtual = 0;
 let continuar = document.getElementById("continuar");
 continuar.disabled = true;
 
+// função assíncrona pra ler as perguntas e respostas do respectivo arquivo JSON
 async function carregaPerguntas(tipoTreino) {
     let url;
     if (tipoTreino == "HTML") {
@@ -29,6 +30,7 @@ async function carregaPerguntas(tipoTreino) {
     return perguntas;
 }
 
+// função assíncrona que inicia o jogo
 async function comecar(tipoTreino)
 {
     indiceAtual = 0;
@@ -42,6 +44,7 @@ async function comecar(tipoTreino)
     mostrarPerguntaAtual();
 }
 
+// função para embaralhar as perguntas
 function perguntasEmbaralhadas(perguntas) 
 {
     for (let i = perguntas.length - 1; i > 0; i--) 
@@ -51,6 +54,7 @@ function perguntasEmbaralhadas(perguntas)
     }
 }
 
+// função para mostrar a resposta e continuar o jogo quando o usuário clicar em 'continuar' 
 function botaoEsquerdo()
 {
     contagemEsquerdo++;
@@ -70,6 +74,7 @@ function botaoEsquerdo()
     }, {once: true});
 }
 
+// função para passar pra próxima pergunta
 function botaoDireito()
 {
     contagemDireito++;
@@ -78,6 +83,7 @@ function botaoDireito()
     mostrarPerguntaAtual();
 }
 
+// função para começar o contador de tempo
 function iniciarTemporizador() 
 {
     tempo = 0;
@@ -88,6 +94,7 @@ function iniciarTemporizador()
     }, 1000);
 }
 
+// função para mostrar as perguntas
 function mostrarPerguntaAtual() 
 {
     if (indiceAtual < perguntasSelecionadas.length) 
