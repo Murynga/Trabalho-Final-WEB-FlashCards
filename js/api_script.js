@@ -1,5 +1,6 @@
 const listaUsuarios = document.getElementById("lista-usuarios");
-let usuarioSelecionado;
+let usuarioSelecionado = null;
+const url = "https://jsonplaceholder.typicode.com/users/";
 
 preencheLista();
 
@@ -16,16 +17,6 @@ function checaAdmin() {
         }
     });
 }
-/** Agora, para o desenvolvimento do uso da API:
- * 
- * Vamo botar uma lista em baixo com os usuários fakes do https://jsonplaceholder.typicode.com
- * colocar um botão de editar as informações de cada um (o jsonplaceholder permite isso, mas vai ser só visual, tipo como é feito aqui https://exemplos-one.vercel.app/ex-02/index.html) (isso vai ser um método PUT ou PATCH)
- * colocar um botão de deletar (isso vai ser um método DELETE)
- * 
- * Quanto ao visual da API:
- * Vamo colocar só uma listinha simples de usuários que adiciona o nome deles com um for e createElement("li")
- * Essa lista vai só mostrar os nomes dos usuários, e embaixo dela vai ter os botões de editar nome e deletar.
- */
 
 async function preencheLista() {
     const usuarios = await getUsuarios();
@@ -36,7 +27,7 @@ async function preencheLista() {
         linhaLista.tabIndex = -1;
 
         linhaLista.addEventListener("click", () => {
-            usuarioSelecionado = usuario.name;
+            usuarioSelecionado = [usuario.name, usuario.id];
         });
 
         listaUsuarios.appendChild(linhaLista);
@@ -45,7 +36,6 @@ async function preencheLista() {
 }
 
 async function getUsuarios() {
-    const url = "https://jsonplaceholder.typicode.com/users/";
     const response = await fetch(url);
 
     if (response.ok) {
@@ -57,10 +47,51 @@ async function getUsuarios() {
     }
 }
 
-function alteraNome() {
-    
+async function alteraNome() {
+    if (usuarioSelecionado != null) {
+        let novoNome = window.prompt("Insira o novo nome:", usuarioSelecionado[0]);
+
+        for (let usuario of listaUsuarios.children) {
+            if (usuario.innerText === usuarioSelecionado[0]) {
+                usuario.innerText = novoNome;
+                break;
+            }
+        }
+        
+        const response = await fetch(url + usuarioSelecionado[1], {
+            method: "PATCH",
+            body: JSON.stringify({
+                name: novoNome,
+            }),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8",
+            },
+        }); 
+
+        if (response.ok) {
+            listaUsuarios.innerText = "";
+            await preencheLista();
+        } else {
+            alert("Erro ao alterar nome: " + response.status);
+        }
+    }
 }
 
-function removeUsuario() {
-    
+async function removeUsuario() {
+    if (usuarioSelecionado != null) {
+        let remover = window.confirm(`Tem certeza de que quer remover ${usuarioSelecionado[0]}?`);
+
+        if (remover == true) {
+            const response = await fetch(url + usuarioSelecionado[1], {
+                method: "DELETE",
+            });
+
+            if (response.ok) {
+                listaUsuarios.innerText = "";
+                await preencheLista();
+            } else {
+            alert("Erro ao remover usuário: " + response.status);
+        }
+        }
+    }
 }
